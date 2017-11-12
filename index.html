@@ -145,15 +145,17 @@ export const appRoutes: Routes = [
            <span><</span>a [routerLink]="routes.ENGINE">Engine  <span><</span>/a>
             </code>
         </pre>
-    <small>
-        <a href="https://github.com/hinol/angulartip.com-e2edemo/commit/716174aaf5166334eed615a88b74b3a9139f8873">
-            hinol/angulartip.com-e2edemo/commit/716174...
-        </a></small>
+  <p>
+      <small>
+          <a href="https://github.com/hinol/angulartip.com-e2edemo/commit/716174aaf5166334eed615a88b74b3a9139f8873">
+              hinol/angulartip.com-e2edemo/commit/716174...
+          </a></small>
+  </p>
 
 </section>
 
 
-<section class="slide">
+<section class="slide compact">
     <h2>Don't use strings!</h2>
     <pre style="font-size: 14px;" class="language-javascript line-numbers">
             <code>
@@ -182,21 +184,29 @@ setColor(color: ColorOptionEnum){
 </section>
 
 
-<section class="slide">
-    <h2>Create modules!</h2>
+<section class="slide compact">
+    <h2>Create small modules!</h2>
 
     <ol>
         <li>Small modules are better</li>
         <li>Allow you to use lazy loading</li>
         <li>Code is more clear</li>
     </ol>
+    Example:
+    <ul>
+        <li>UiModule - interface modules</li>
+        <li>CoreModule - common services, resolvers, repository</li>
+        <li>ConfiguratorModule - feature components/services etc</li>
+        <li>DesignModule  - feature components/services etc</li>
+    </ul>
+
     <a href="https://github.com/hinol/angulartip.com-e2edemo/tree/master/src/app/car">
         hinol/angulartip.com-e2edemo/tree/master/src/app/car
     </a>
 
 </section>
 
-<section class="slide">
+<section class="slide compact">
     <h2>Upgrade package.json!</h2>
 
     <ul>
@@ -210,10 +220,16 @@ setColor(color: ColorOptionEnum){
         <li>New version fixing bugs!</li>
     </ul>
 </section>
-<section class="slide">
+<section class="slide compact">
     <h2>Read documentations!</h2>
+
+
+    <ol>
+        <li><a href="https://angular.io/">https://angular.io/</a></li>
+        <li><a href="http://reactivex.io/rxjs/">http://reactivex.io/rxjs/</a></li>
+    </ol>
 </section>
-<section class="slide">
+<section class="slide compact">
     <h2>Create sandbox, public github, be speaker on WarsawJS!</h2>
 </section>
 
