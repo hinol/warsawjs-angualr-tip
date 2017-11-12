@@ -46,50 +46,169 @@
 
 <section class="slide compact">
     <h2>Test everything</h2>
+    <p>
+        level: 100%, also e2e:
+
+        <a href="https://github.com/hinol/angulartip.com-e2edemo" target="_blank">e2edemo</a>
+
+    </p>
+
+    <pre style="font-size: 16px;" class="language-javascript line-numbers">
+            <code>
+                       coverageIstanbulReporter: {
+            reports: ['html', 'lcovonly'],
+            fixWebpackSourcePaths: true,
+            thresholds: config.angularCli.codeCoverage ? {
+                each: {
+                    statements: 100,
+                    lines: 100,
+                    branches: 100,
+                    functions: 100
+                },
+                global: {
+                    statements: 100,
+                    lines: 100,
+                    branches: 100,
+                    functions: 100
+                }
+            } : {}
+        },
+            </code>
+        </pre>
+
 
 </section>
 
 <section class="slide compact">
     <h2>Use reactive forms</h2>
+
+    <p>
+        Angular Warsaw #16: <a href="https://github.com/darekb/formularze-w-angularze-angular-warsaw">darekb/formularze-w-angularze-angular-warsaw</a>
+
+    </p>
+    <ol>
+        <li>Logic in services/components</li>
+        <li>Possibility to cover by unittest</li>
+        <li>
+            <a href="https://angular.io/guide/reactive-forms">angular.io/guide/reactive-forms</a>
+        </li>
+
+    </ol>
 </section>
 
 <section class="slide compact">
     <h2>Avoid two way data binding</h2>
+    <ol>
+        <li>Hard to test</li>
+    </ol>
 </section>
 
 <section class="slide compact">
     <h2>Don't use not void functions in templates</h2>
-
+    <ol>
+        <li>Hard to test</li>
+        <li>Logic should not be there</li>
+    </ol>
 </section>
 
 
 <section class="slide compact">
-    <h2>Movie logick to services</h2>
+    <h2>Components with minimum logic and small</h2>
+    <ol>
+        <li>Easier to test logic in services</li>
+        <li>Big component it's a bad component</li>
+        <li>Small components you will be able reuse</li>
+    </ol>
 
 </section>
-
 
 
 <section class="slide compact">
     <h2>Routes as variables</h2>
+    <pre style="font-size: 14px;" class="language-javascript line-numbers">
+            <code>
+export const appRoutes: Routes = [
+  {
+    path: '', component: CarIndexComponent, children: [
+    {
+      path: CAR_ROUTE.COLOR,
+      component: CarColorComponent,
+    },
+ .....
+    this.router.navigate(CAR_ROUTE.COLOR);
+    this.router.navigate(CAR_ROUTE.FIRST_STEP);
+            </code>
+        </pre>
+    <pre style="font-size: 14px;" class="language-html line-numbers">
+            <code>
+           <span><</span>a [routerLink]="routes.COLOR">Color  <span><</span>/a>
+           <span><</span>a [routerLink]="routes.ENGINE">Engine  <span><</span>/a>
+            </code>
+        </pre>
+    <small>
+        <a href="https://github.com/hinol/angulartip.com-e2edemo/commit/716174aaf5166334eed615a88b74b3a9139f8873">
+            hinol/angulartip.com-e2edemo/commit/716174...
+        </a></small>
 
 </section>
 
 
-
-
 <section class="slide">
     <h2>Don't use strings!</h2>
-    <h2>Routes, config as variable</h2>
+    <pre style="font-size: 14px;" class="language-javascript line-numbers">
+            <code>
+    private selectedColor: ColorOptionEnum;
+....
+setColor(color: ColorOptionEnum){
+    this.selectedColor = color;
+}
+            </code>
+    </pre>
+
+    <pre style="font-size: 14px;" class="language-html line-numbers">
+            <code>
+    <span><</span>button (click)="setColor(colorEnum.RED)">
+        RED LABEL
+    <span><</span>/button>
+    <span><</span>button (click)="setColor(colorEnum.BLUE)">
+        BLUE LABEL
+    <span><</span>/button>
+            </code>
+     </pre>
+    <small>
+        <a href="https://github.com/hinol/angulartip.com-e2edemo/commit/1373034eb6f7d7f9f09a353e935204b546224b17">
+            hinol/angulartip.com-e2edemo/commit/1373034e....
+        </a></small>
 </section>
 
 
 <section class="slide">
     <h2>Create modules!</h2>
+
+    <ol>
+        <li>Small modules are better</li>
+        <li>Allow you to use lazy loading</li>
+        <li>Code is more clear</li>
+    </ol>
+    <a href="https://github.com/hinol/angulartip.com-e2edemo/tree/master/src/app/car">
+        hinol/angulartip.com-e2edemo/tree/master/src/app/car
+    </a>
+
 </section>
 
 <section class="slide">
     <h2>Upgrade package.json!</h2>
+
+    <ul>
+        <li>
+            <a href="https://www.npmjs.com/package/npm-upgrade">
+                npmjs.com/package/npm-upgrade
+            </a>
+        </li>
+        <li>Changing all the time</li>
+        <li>Just to be update</li>
+        <li>New version fixing bugs!</li>
+    </ul>
 </section>
 <section class="slide">
     <h2>Read documentations!</h2>
@@ -100,7 +219,6 @@
 
 
 <div class="progress"></div>
-
 
 
 <footer class="badge badge-top-left">
