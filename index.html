@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WarsawJS Slides: Template</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Shower Theme -->
+    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x10.css"/>
+    <link rel="stylesheet" href="vendors/shower-warsawjs/styles/main.css"/>
+
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="vendors/prism/prism.css"/>
+    <link rel="stylesheet" href="modules/custom-prism.css"/>
+</head>
+<body class="shower list">
+<header class="caption">
+    <h1>WarsawJS Slides: Template</h1>
+    <p>We talk about JavaScript. Each month in Warsaw, Poland.</p>
+</header>
+
+<section class="slide front-page">
+    <div class="logo">
+        <!-- Logo WarsawJS -->
+        <img src="pictures/logo/warsawjs-logo-light.png">
+    </div>
+    <div class="details">
+        <!-- 1. Avatar -->
+        <img src="pictures/my-avatar.jpg" alt="Speaker"/>
+
+        <!-- 2. Speaker -->
+        <h2>Mateusz Żeromski</h2>
+
+        <!-- 3. Presentation title -->
+        <h2><strong>"Angular4 + Redux" [PL/EN]</strong></h2>
+
+        <!-- 4. Presentation date -->
+        <h2>2017-07</h2>
+
+        <!-- 5. Contact the speaker -->
+        <h2><a href="http://www.tasm.pro">www.tasm.pro</a></h2>
+    </div>
+</section>
+
+<section class="slide compact">
+    <h2>Problem</h2>
+    <ul>
+        <li class="next">
+            multiple places changes data, ex: messages
+            <ul>
+                <li class="next">user status on top</li>
+                <li class="next">chat on bottom</li>
+                <li class="next">message menu</li>
+            </ul>
+        </li>
+        <li class="next">update from server</li>
+        <li class="next">debug</li>
+    </ul>
+</section>
+
+<section class="slide compact">
+    <h2>Solutions</h2>
+    <ol>
+        <li class="next">parent > child structure</li>
+        <li class="next">global variable like rootScope in angularjs</li>
+        <li class="next">many services + models</li>
+        <li class="next">multiple input/output in ng2</li>
+    </ol>
+</section>
+
+<section class="slide compact">
+    <h2>User status changes</h2>
+    <ol>
+        <li class="next">register/login</li>
+        <li class="next">wrote message</li>
+        <li class="next">like/dislike</li>
+        <li class="next">comment/share</li>
+        <li class="next">any activity</li>
+    </ol>
+</section>
+
+<section class="slide compact">
+    <h2>Redux in google images     <a href="https://css-tricks.com/learning-react-redux/">source</a>
+    </h2>
+    <p><img src="pictures/redux.svg"  height="20%" alt=""></p>
+</section>
+
+
+<section class="slide compact">
+    <h2>What is redux?</h2>
+    <p>Predictable state container for JavaScript apps</p>
+    <p>https://github.com/reactjs/redux</p>
+</section>
+
+
+
+<section class="slide compact">
+    <h2>See demo</h2>
+    <p>
+        <a href="http://localhost:4200" target="demo">http://localhost:4200</a>
+    </p>
+</section>
+
+
+
+
+<section class="slide">
+    <h3 class="shout">See you next month at WarsawJS</h3>
+</section>
+
+<div class="progress"></div>
+
+
+
+<footer class="badge badge-top-left">
+    <a href="#" class="fullscreen">Fullscreen</a>
+</footer>
+
+<script src="vendors/gamepad/gamepad.js"></script>
+<script src="vendors/shower/shower.min.js"></script>
+<script src="vendors/shower-gamepad/shower.gamepad.js"></script>
+<script src="modules/fullscreen.js"></script>
+
+<!-- Prism.js -->
+<script src="vendors/prism/prism.js"></script>
+<script src="modules/custom-prism.js"></script>
+</body>
+</html>
