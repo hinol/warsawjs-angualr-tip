@@ -100,6 +100,8 @@
     <h2>Avoid two way data binding</h2>
     <ol>
         <li>Hard to test</li>
+        <li>Hard to validate fields</li>
+        <li>Better to use FormControl</li>
     </ol>
 </section>
 
@@ -109,6 +111,14 @@
         <li>Hard to test</li>
         <li>Logic should not be there</li>
     </ol>
+    Good examples:
+    <ol>
+        <li>analytics event</li>
+        <li>open modal</li>
+        <li>close</li>
+        <li>navigate</li>
+    </ol>
+
 </section>
 
 
@@ -119,6 +129,7 @@
         <li>Big component it's a bad component</li>
         <li>Small components you will be able reuse</li>
     </ol>
+    Use ngrx - then all logic you will be able implement in constructor!
 
 </section>
 
@@ -185,10 +196,10 @@ setColor(color: ColorOptionEnum){
 
 
 <section class="slide compact">
-    <h2>Create small modules!</h2>
+    <h2>Create small modules! - monorepo, lazyloading, suppoer aot</h2>
 
     <ol>
-        <li>Small modules are better</li>
+        <li>Small modules are better to develop</li>
         <li>Allow you to use lazy loading</li>
         <li>Code is more clear</li>
     </ol>
